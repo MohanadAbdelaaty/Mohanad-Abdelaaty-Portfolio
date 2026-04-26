@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mohand Abdelaaty Portfolio</title>
+<title>Mohand Abdelaaty — Financial & Revenue Analyst</title>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
 <style>
@@ -13,7 +13,7 @@
 --ink:#0f172a;--ink2:#475569;--ink3:#94a3b8;
 --blue:#2563eb;--blue-soft:#eff4ff;--cyan:#0891b2;--green:#059669;--green-soft:#ecfdf5;
 --red:#dc2626;--red-soft:#fef2f2;--amber:#d97706;--amber-soft:#fffbeb;
---violet:#7c3aed;--violet-soft:#f5f3ff;
+--violet:#7c3aed;--violet-soft:#f5f3ff;--pink:#db2777;--pink-soft:#fdf2f8;
 --border:#e2e8f0;--border2:#cbd5e1;
 --shadow-sm:0 1px 3px rgba(15,23,42,.04);
 --shadow:0 4px 24px rgba(15,23,42,.06);
@@ -24,32 +24,31 @@ html{scroll-behavior:smooth}
 body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);line-height:1.65;-webkit-font-smoothing:antialiased}
 .mono{font-family:'JetBrains Mono',monospace}
 
-/* ── NAV ── */
-nav{position:fixed;top:0;width:100%;z-index:200;background:rgba(248,249,251,.82);backdrop-filter:blur(20px) saturate(1.3);border-bottom:1px solid var(--border);padding:.7rem 0}
-.nav-c{max-width:1140px;margin:0 auto;padding:0 2rem;display:flex;align-items:center;justify-content:space-between}
+/* NAV */
+nav{position:fixed;top:0;width:100%;z-index:200;background:rgba(248,249,251,.85);backdrop-filter:blur(20px) saturate(1.3);border-bottom:1px solid var(--border);padding:.7rem 0}
+.nav-c{max-width:1200px;margin:0 auto;padding:0 2rem;display:flex;align-items:center;justify-content:space-between}
 .nav-logo{font-weight:800;font-size:1.05rem;letter-spacing:-.03em}.nav-logo span{color:var(--blue)}
 .nav-mid{display:flex;gap:2rem;list-style:none}
 .nav-mid a{color:var(--ink3);text-decoration:none;font-size:.82rem;font-weight:500;transition:color .2s}.nav-mid a:hover{color:var(--blue)}
 .nav-cta{padding:.45rem 1.2rem;background:var(--ink);color:#fff;border:none;border-radius:50px;font-family:inherit;font-size:.78rem;font-weight:600;cursor:pointer;transition:all .25s}
 .nav-cta:hover{background:var(--blue);transform:translateY(-1px)}
 
-/* ── HERO ── */
+/* HERO */
 .hero{padding:9rem 2rem 5rem;position:relative;overflow:hidden}
 .hero::before{content:'';position:absolute;top:-200px;right:-150px;width:600px;height:600px;background:radial-gradient(circle,rgba(37,99,235,.05),transparent 70%);pointer-events:none}
 .hero::after{content:'';position:absolute;bottom:-100px;left:-100px;width:400px;height:400px;background:radial-gradient(circle,rgba(8,145,178,.04),transparent 70%);pointer-events:none}
-.hero-c{max-width:1140px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center}
+.hero-c{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center}
 .hero-badge{display:inline-flex;align-items:center;gap:.4rem;padding:.3rem .85rem;background:var(--green-soft);border:1px solid rgba(5,150,105,.15);border-radius:50px;font-size:.7rem;font-weight:600;color:var(--green);margin-bottom:1.2rem}
 .hero-badge .pulse{width:6px;height:6px;background:var(--green);border-radius:50%;animation:pulse 2s infinite}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
 .hero h1{font-size:clamp(2rem,4vw,3.2rem);font-weight:800;line-height:1.1;letter-spacing:-.035em;margin-bottom:.8rem}
 .hero h1 .light{font-weight:300;color:var(--ink2)}
-.hero-p{color:var(--ink2);font-size:.95rem;margin-bottom:1.8rem;max-width:460px}
+.hero-p{color:var(--ink2);font-size:.95rem;margin-bottom:1.8rem;max-width:480px}
 .hero-btns{display:flex;gap:.7rem;flex-wrap:wrap}
 .btn{padding:.65rem 1.5rem;border-radius:50px;font-family:inherit;font-size:.82rem;font-weight:600;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:.35rem;border:none;transition:all .25s}
 .btn-dark{background:var(--ink);color:#fff}.btn-dark:hover{background:var(--blue);transform:translateY(-2px);box-shadow:0 8px 25px rgba(37,99,235,.18)}
 .btn-out{background:transparent;border:1.5px solid var(--border);color:var(--ink)}.btn-out:hover{border-color:var(--blue);color:var(--blue)}
 
-/* hero mini dashboard */
 .hero-dash{background:var(--surface);border:1px solid var(--border);border-radius:20px;padding:1.5rem;box-shadow:var(--shadow-lg)}
 .hero-dash-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:1rem}
 .hero-dash-title{font-size:.78rem;font-weight:600;color:var(--ink2)}
@@ -61,54 +60,74 @@ nav{position:fixed;top:0;width:100%;z-index:200;background:rgba(248,249,251,.82)
 .h-kpi-c{font-size:.65rem;color:var(--green);font-weight:500;margin-top:.1rem}
 .h-kpi-c.neg{color:var(--red)}
 
-/* ── SECTIONS ── */
+/* SECTIONS */
 section{padding:5rem 2rem}
-.max-w{max-width:1140px;margin:0 auto}
+.max-w{max-width:1200px;margin:0 auto}
 .stag{font-size:.65rem;text-transform:uppercase;letter-spacing:2.5px;color:var(--blue);font-weight:700;margin-bottom:.5rem}
 .stitle{font-size:1.8rem;font-weight:700;letter-spacing:-.02em;margin-bottom:.3rem}
-.sdesc{color:var(--ink2);font-size:.9rem;margin-bottom:2.5rem;max-width:520px}
+.sdesc{color:var(--ink2);font-size:.9rem;margin-bottom:2.5rem;max-width:560px}
 
-/* ── DASHBOARD TABS ── */
-.tabs{display:flex;gap:.5rem;margin-bottom:2rem;flex-wrap:wrap}
-.tab{padding:.5rem 1.1rem;background:var(--surface);border:1px solid var(--border);border-radius:50px;font-family:inherit;font-size:.78rem;font-weight:600;color:var(--ink3);cursor:pointer;transition:all .2s}
+/* TABS */
+.tabs-wrap{overflow-x:auto;margin-bottom:1.5rem;padding-bottom:.5rem}
+.tabs{display:flex;gap:.5rem;min-width:max-content}
+.tab{padding:.5rem 1.1rem;background:var(--surface);border:1px solid var(--border);border-radius:50px;font-family:inherit;font-size:.76rem;font-weight:600;color:var(--ink3);cursor:pointer;transition:all .2s;white-space:nowrap}
 .tab:hover{color:var(--ink);border-color:var(--border2)}
 .tab.active{background:var(--ink);color:#fff;border-color:var(--ink)}
+.tab .num{font-family:'JetBrains Mono',monospace;font-size:.62rem;opacity:.6;margin-right:.2rem}
 
 .dash-panel{display:none}
-.dash-panel.active{display:block}
+.dash-panel.active{display:block;animation:fadeIn .4s ease}
+@keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
 
-/* ── DASHBOARD CARDS ── */
+/* CARDS */
 .d-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow-sm);overflow:hidden;margin-bottom:1.2rem}
-.d-card-head{padding:1rem 1.3rem;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--border)}
+.d-card-head{padding:1rem 1.3rem;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--border);flex-wrap:wrap;gap:.5rem}
 .d-card-t{font-size:.85rem;font-weight:600}
 .d-card-badge{font-size:.6rem;padding:.15rem .5rem;border-radius:50px;font-weight:600}
 .d-card-body{padding:1.3rem}
 
+/* INSIGHT BOX */
+.insight{background:linear-gradient(135deg,var(--amber-soft),#fff5e0);border:1px solid rgba(217,119,6,.2);border-left:3px solid var(--amber);padding:.8rem 1rem;border-radius:var(--radius-xs);margin-top:1rem;display:flex;gap:.7rem;align-items:flex-start}
+.insight-ic{font-size:1rem;flex-shrink:0;margin-top:.05rem}
+.insight-tx{font-size:.78rem;color:var(--ink2);line-height:1.55}
+.insight-tx strong{color:var(--ink);font-weight:600}
+
+.insight.pos{background:linear-gradient(135deg,var(--green-soft),#f0fdf4);border-color:rgba(5,150,105,.2);border-left-color:var(--green)}
+.insight.neg{background:linear-gradient(135deg,var(--red-soft),#fff1f2);border-color:rgba(220,38,38,.2);border-left-color:var(--red)}
+.insight.info{background:linear-gradient(135deg,var(--blue-soft),#f0f7ff);border-color:rgba(37,99,235,.2);border-left-color:var(--blue)}
+
+/* KPIS */
 .kpi-strip{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:.8rem;margin-bottom:1.2rem}
 .kpi{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-xs);padding:1rem;position:relative;overflow:hidden}
 .kpi::after{content:'';position:absolute;top:0;left:0;right:0;height:3px}
-.kpi.blue::after{background:var(--blue)}.kpi.green::after{background:var(--green)}.kpi.amber::after{background:var(--amber)}.kpi.violet::after{background:var(--violet)}.kpi.red::after{background:var(--red)}.kpi.cyan::after{background:var(--cyan)}
-.kpi-l{font-size:.6rem;text-transform:uppercase;letter-spacing:.8px;color:var(--ink3);font-weight:600;margin-bottom:.2rem}
-.kpi-v{font-size:1.35rem;font-weight:700}
+.kpi.blue::after{background:var(--blue)}.kpi.green::after{background:var(--green)}.kpi.amber::after{background:var(--amber)}.kpi.violet::after{background:var(--violet)}.kpi.red::after{background:var(--red)}.kpi.cyan::after{background:var(--cyan)}.kpi.pink::after{background:var(--pink)}
+.kpi-l{font-size:.58rem;text-transform:uppercase;letter-spacing:.8px;color:var(--ink3);font-weight:600;margin-bottom:.2rem}
+.kpi-v{font-size:1.3rem;font-weight:700}
 .kpi-ch{font-size:.65rem;font-weight:500;margin-top:.15rem;display:inline-flex;align-items:center;gap:.2rem;padding:.1rem .4rem;border-radius:50px}
-.kpi-ch.up{color:var(--green);background:var(--green-soft)}.kpi-ch.dn{color:var(--red);background:var(--red-soft)}
+.kpi-ch.up{color:var(--green);background:var(--green-soft)}.kpi-ch.dn{color:var(--red);background:var(--red-soft)}.kpi-ch.nt{color:var(--ink3);background:var(--surface2)}
 
 .chart-wrap{position:relative;height:280px}
+.chart-wrap.tall{height:340px}
 .chart-wrap canvas{width:100%!important;height:100%!important}
 
 .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem}
 .grid-3{display:grid;grid-template-columns:2fr 1fr;gap:1.2rem}
+.grid-1-2{display:grid;grid-template-columns:1fr 2fr;gap:1.2rem}
 
-/* ── TABLE ── */
+/* TABLE */
 .dtable{width:100%;border-collapse:collapse;font-size:.78rem}
-.dtable th{text-align:left;padding:.6rem .7rem;color:var(--ink3);font-weight:600;font-size:.65rem;text-transform:uppercase;letter-spacing:.7px;border-bottom:2px solid var(--border)}
-.dtable td{padding:.55rem .7rem;border-bottom:1px solid var(--surface2)}
+.dtable th{text-align:left;padding:.55rem .7rem;color:var(--ink3);font-weight:600;font-size:.62rem;text-transform:uppercase;letter-spacing:.7px;border-bottom:2px solid var(--border)}
+.dtable td{padding:.5rem .7rem;border-bottom:1px solid var(--surface2)}
 .dtable tbody tr:hover{background:var(--blue-soft)}
 .dtable .bold{font-weight:600;color:var(--ink)}
-.pill{display:inline-block;padding:.12rem .45rem;border-radius:50px;font-size:.65rem;font-weight:600}
-.pill-g{color:var(--green);background:var(--green-soft)}.pill-r{color:var(--red);background:var(--red-soft)}.pill-a{color:var(--amber);background:var(--amber-soft)}
+.dtable .right{text-align:right}
+.dtable .total-row{background:var(--surface2);font-weight:700}
+.dtable .total-row td{border-top:2px solid var(--border2);border-bottom:none;color:var(--ink)}
+.dtable .sub{padding-left:1.5rem;color:var(--ink2)}
+.pill{display:inline-block;padding:.12rem .45rem;border-radius:50px;font-size:.62rem;font-weight:600}
+.pill-g{color:var(--green);background:var(--green-soft)}.pill-r{color:var(--red);background:var(--red-soft)}.pill-a{color:var(--amber);background:var(--amber-soft)}.pill-b{color:var(--blue);background:var(--blue-soft)}
 
-/* ── SKILLS ── */
+/* SKILLS */
 .sk-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:.8rem}
 .sk{padding:1.2rem;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-sm);transition:border-color .2s}
 .sk:hover{border-color:var(--blue)}
@@ -117,7 +136,7 @@ section{padding:5rem 2rem}
 .sk-bar{height:3px;background:var(--surface2);border-radius:2px;margin-top:.6rem;overflow:hidden}
 .sk-fill{height:100%;border-radius:2px}
 
-/* ── TIMELINE ── */
+/* TIMELINE */
 .tl{max-width:680px;position:relative}
 .tl::before{content:'';position:absolute;left:7px;top:6px;bottom:6px;width:1.5px;background:linear-gradient(180deg,var(--blue),var(--violet))}
 .tl-i{padding-left:30px;margin-bottom:2.2rem;position:relative}
@@ -129,14 +148,14 @@ section{padding:5rem 2rem}
 .tl-tags{display:flex;flex-wrap:wrap;gap:.3rem;margin-top:.4rem}
 .tl-tag{font-size:.58rem;padding:.12rem .4rem;background:var(--blue-soft);color:var(--blue);border-radius:4px;font-weight:600}
 
-/* ── CERTS ── */
+/* CERTS */
 .cert-g{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:.8rem}
 .cert{padding:1.2rem;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-sm)}
 .cert .ic{font-size:1.4rem;margin-bottom:.5rem}
 .cert h4{font-size:.85rem;font-weight:600;margin-bottom:.15rem}
 .cert p{font-size:.72rem;color:var(--ink3)}
 
-/* ── CONTACT ── */
+/* CONTACT */
 .cta-box{text-align:center;max-width:520px;margin:0 auto}
 .c-links{display:flex;justify-content:center;gap:.8rem;margin-top:1.3rem;flex-wrap:wrap}
 .c-l{display:flex;align-items:center;gap:.35rem;padding:.55rem 1.2rem;background:var(--surface);border:1px solid var(--border);border-radius:50px;color:var(--ink);text-decoration:none;font-size:.8rem;font-weight:500;transition:all .2s}
@@ -145,25 +164,22 @@ section{padding:5rem 2rem}
 
 footer{text-align:center;padding:1.5rem;font-size:.68rem;color:var(--ink3);border-top:1px solid var(--border)}
 
-/* ── ANIM ── */
 .reveal{opacity:0;transform:translateY(25px);transition:all .6s ease}.reveal.on{opacity:1;transform:translateY(0)}
 
-/* ── RESPONSIVE ── */
 @media(max-width:900px){
   .hero-c{grid-template-columns:1fr}.hero-dash{display:none}
   .nav-mid{display:none}
-  .grid-2,.grid-3{grid-template-columns:1fr}
+  .grid-2,.grid-3,.grid-1-2{grid-template-columns:1fr}
   .kpi-strip{grid-template-columns:repeat(2,1fr)}
 }
 @media(max-width:500px){
   .kpi-strip{grid-template-columns:1fr}
-  .tabs{gap:.3rem}.tab{font-size:.7rem;padding:.4rem .8rem}
+  .tab{font-size:.7rem;padding:.4rem .8rem}
 }
 </style>
 </head>
 <body>
 
-<!-- NAV -->
 <nav>
 <div class="nav-c">
   <div class="nav-logo">Mohand<span>.</span></div>
@@ -181,9 +197,9 @@ footer{text-align:center;padding:1.5rem;font-size:.68rem;color:var(--ink3);borde
 <section class="hero">
 <div class="hero-c">
   <div>
-    <div class="hero-badge"><span class="pulse"></span>Open to Work </div>
+    <div class="hero-badge"><span class="pulse"></span>Financial Analytics & FP&A</div>
     <h1>Financial & Revenue Analyst<br><span class="light">who turns data into decisions</span></h1>
-    <p class="hero-p">Numbers tell a story — I make sure it's the right one. I help healthcare organizations uncover revenue opportunities, build robust financial models, and deliver dashboards that drive executive action.</p>
+    <p class="hero-p">Numbers tell a story — I make sure it's the right one. I help businesses uncover growth drivers, build robust financial models, and deliver dashboards that drive executive action.</p>
     <div class="hero-btns">
       <a href="#dashboards" class="btn btn-dark">Explore Dashboards ↓</a>
       <a href="mailto:mohand.abdelaaty@outlook.com" class="btn btn-out">Get in Touch</a>
@@ -191,14 +207,14 @@ footer{text-align:center;padding:1.5rem;font-size:.68rem;color:var(--ink3);borde
   </div>
   <div class="hero-dash">
     <div class="hero-dash-head">
-      <span class="hero-dash-title">Revenue Snapshot — YTD</span>
+      <span class="hero-dash-title">Financial Snapshot — YTD</span>
       <span class="hero-dash-pill">● Live</span>
     </div>
     <div class="hero-kpis">
-      <div class="h-kpi"><div class="h-kpi-l">Total Revenue</div><div class="h-kpi-v mono">$34.2M</div><div class="h-kpi-c">▲ 8.2% YoY</div></div>
-      <div class="h-kpi"><div class="h-kpi-l">Target Hit</div><div class="h-kpi-v mono">96.4%</div><div class="h-kpi-c">▲ 2.3pp</div></div>
-      <div class="h-kpi"><div class="h-kpi-l">Collection Rate</div><div class="h-kpi-v mono">94.3%</div><div class="h-kpi-c neg">▼ 0.8pp</div></div>
-      <div class="h-kpi"><div class="h-kpi-l">Avg Monthly</div><div class="h-kpi-v mono">$3.8M</div><div class="h-kpi-c">▲ 5.1%</div></div>
+      <div class="h-kpi"><div class="h-kpi-l">Revenue YTD</div><div class="h-kpi-v mono">$48.2M</div><div class="h-kpi-c">▲ 12.4% YoY</div></div>
+      <div class="h-kpi"><div class="h-kpi-l">Gross Margin</div><div class="h-kpi-v mono">42.8%</div><div class="h-kpi-c">▲ 1.8pp</div></div>
+      <div class="h-kpi"><div class="h-kpi-l">EBITDA Margin</div><div class="h-kpi-v mono">23.5%</div><div class="h-kpi-c">▲ 2.1pp</div></div>
+      <div class="h-kpi"><div class="h-kpi-l">FCF</div><div class="h-kpi-v mono">$8.4M</div><div class="h-kpi-c neg">▼ 3.2%</div></div>
     </div>
   </div>
 </div>
@@ -208,137 +224,403 @@ footer{text-align:center;padding:1.5rem;font-size:.68rem;color:var(--ink3);borde
 <section id="dashboards" style="background:var(--surface2)">
 <div class="max-w">
   <div class="stag">Portfolio</div>
-  <div class="stitle">Interactive Dashboards</div>
-  <p class="sdesc">Built with real healthcare data methodologies — Power BI style interactive dashboards and Excel financial models.</p>
+  <div class="stitle">Financial Analysis Dashboards</div>
+  <p class="sdesc">A comprehensive suite of dashboards covering the full financial analysis spectrum — from revenue performance to 3-statement modeling, profitability deep-dives, and customer cohort analysis.</p>
 
-  <div class="tabs">
-    <button class="tab active" onclick="showTab(0)">Revenue Dashboard</button>
-    <button class="tab" onclick="showTab(1)">Budget vs Actual</button>
-    <button class="tab" onclick="showTab(2)">Revenue Forecast</button>
-    <button class="tab" onclick="showTab(3)">Physician Profitability</button>
+  <div class="tabs-wrap">
+    <div class="tabs">
+      <button class="tab active" onclick="showTab(0)"><span class="num">01</span>Revenue Performance</button>
+      <button class="tab" onclick="showTab(1)"><span class="num">02</span>Growth Drivers</button>
+      <button class="tab" onclick="showTab(2)"><span class="num">03</span>Income Statement</button>
+      <button class="tab" onclick="showTab(3)"><span class="num">04</span>3-Statement Model</button>
+      <button class="tab" onclick="showTab(4)"><span class="num">05</span>Working Capital</button>
+      <button class="tab" onclick="showTab(5)"><span class="num">06</span>Profitability</button>
+      <button class="tab" onclick="showTab(6)"><span class="num">07</span>Budget vs Actual</button>
+      <button class="tab" onclick="showTab(7)"><span class="num">08</span>Forecast</button>
+    </div>
   </div>
 
-  <!-- ════════ TAB 0: REVENUE DASHBOARD ════════ -->
+  <!-- ════ TAB 0: REVENUE PERFORMANCE ════ -->
   <div class="dash-panel active" id="panel0">
     <div class="kpi-strip reveal">
-      <div class="kpi blue"><div class="kpi-l">Total Revenue YTD</div><div class="kpi-v mono">$34.2M</div><div class="kpi-ch up">▲ 8.2%</div></div>
-      <div class="kpi green"><div class="kpi-l">Avg Monthly</div><div class="kpi-v mono">$3.8M</div><div class="kpi-ch up">▲ 5.1%</div></div>
-      <div class="kpi amber"><div class="kpi-l">Target Achievement</div><div class="kpi-v mono">96.4%</div><div class="kpi-ch up">▲ 2.3pp</div></div>
-      <div class="kpi violet"><div class="kpi-l">Collection Rate</div><div class="kpi-v mono">94.3%</div><div class="kpi-ch dn">▼ 0.8pp</div></div>
+      <div class="kpi blue"><div class="kpi-l">Revenue YTD</div><div class="kpi-v mono">$48.2M</div><div class="kpi-ch up">▲ 12.4%</div></div>
+      <div class="kpi green"><div class="kpi-l">Avg Monthly</div><div class="kpi-v mono">$5.4M</div><div class="kpi-ch up">▲ 8.1%</div></div>
+      <div class="kpi amber"><div class="kpi-l">Target Hit</div><div class="kpi-v mono">103.2%</div><div class="kpi-ch up">▲ 5.4pp</div></div>
+      <div class="kpi violet"><div class="kpi-l">ARR</div><div class="kpi-v mono">$64.8M</div><div class="kpi-ch up">▲ 15.2%</div></div>
+      <div class="kpi cyan"><div class="kpi-l">New Customers</div><div class="kpi-v mono">1,284</div><div class="kpi-ch up">▲ 22%</div></div>
     </div>
 
     <div class="d-card reveal">
-      <div class="d-card-head"><span class="d-card-t">Monthly Revenue vs Target — FY 2025</span><span class="d-card-badge" style="background:var(--green-soft);color:var(--green)">Trend</span></div>
-      <div class="d-card-body"><div class="chart-wrap"><canvas id="c_rev"></canvas></div></div>
+      <div class="d-card-head"><span class="d-card-t">Monthly Revenue vs Target with YoY Comparison</span><span class="d-card-badge" style="background:var(--green-soft);color:var(--green)">Trend</span></div>
+      <div class="d-card-body"><div class="chart-wrap tall"><canvas id="c_rev"></canvas></div>
+        <div class="insight pos">
+          <div class="insight-ic">📈</div>
+          <div class="insight-tx"><strong>Strong outperformance.</strong> Revenue exceeded target in 7 of 9 months YTD with the largest outperformance in September (+6.6%), driven by a 22% increase in new customer acquisition. YoY growth of 12.4% significantly outpaces the prior year's 8.1% trajectory.</div>
+        </div>
+      </div>
     </div>
 
     <div class="grid-3 reveal">
       <div class="d-card">
-        <div class="d-card-head"><span class="d-card-t">Department Performance</span><span class="d-card-badge" style="background:var(--blue-soft);color:var(--blue)">YTD</span></div>
+        <div class="d-card-head"><span class="d-card-t">Revenue by Department</span><span class="d-card-badge" style="background:var(--blue-soft);color:var(--blue)">YTD</span></div>
         <div class="d-card-body">
           <table class="dtable">
-            <thead><tr><th>Department</th><th>Revenue</th><th>Target</th><th>Var%</th><th>Status</th></tr></thead>
+            <thead><tr><th>Department</th><th class="right">Revenue</th><th class="right">% Mix</th><th class="right">Growth</th><th>Status</th></tr></thead>
             <tbody>
-              <tr><td class="bold">Inpatient</td><td class="mono">$16.5M</td><td class="mono">$16.7M</td><td class="mono">-1.2%</td><td><span class="pill pill-a">98.8%</span></td></tr>
-              <tr><td class="bold">Outpatient</td><td class="mono">$8.2M</td><td class="mono">$8.0M</td><td class="mono">+2.5%</td><td><span class="pill pill-g">102.5%</span></td></tr>
-              <tr><td class="bold">Emergency</td><td class="mono">$4.4M</td><td class="mono">$4.3M</td><td class="mono">+1.2%</td><td><span class="pill pill-g">101.2%</span></td></tr>
-              <tr><td class="bold">Lab & Diag</td><td class="mono">$2.9M</td><td class="mono">$3.1M</td><td class="mono">-6.5%</td><td><span class="pill pill-r">93.5%</span></td></tr>
-              <tr><td class="bold">Pharmacy</td><td class="mono">$2.2M</td><td class="mono">$2.1M</td><td class="mono">+4.8%</td><td><span class="pill pill-g">104.8%</span></td></tr>
+              <tr><td class="bold">Inpatient</td><td class="right mono">$19,280</td><td class="right mono">40.0%</td><td class="right mono">+14.2%</td><td><span class="pill pill-g">Strong</span></td></tr>
+              <tr><td class="bold">Outpatient</td><td class="right mono">$11,568</td><td class="right mono">24.0%</td><td class="right mono">+11.5%</td><td><span class="pill pill-g">Healthy</span></td></tr>
+              <tr><td class="bold">ICU</td><td class="right mono">$7,230</td><td class="right mono">15.0%</td><td class="right mono">+18.4%</td><td><span class="pill pill-g">Strong</span></td></tr>
+              <tr><td class="bold">Cath Lab</td><td class="right mono">$5,784</td><td class="right mono">12.0%</td><td class="right mono">+22.1%</td><td><span class="pill pill-g">Star</span></td></tr>
+              <tr><td class="bold">Pharmacy</td><td class="right mono">$4,338</td><td class="right mono">9.0%</td><td class="right mono">-3.2%</td><td><span class="pill pill-r">Declining</span></td></tr>
+              <tr class="total-row"><td>Total</td><td class="right mono">$48,200</td><td class="right mono">100%</td><td class="right mono">+12.4%</td><td></td></tr>
             </tbody>
           </table>
         </div>
       </div>
       <div class="d-card">
-        <div class="d-card-head"><span class="d-card-t">Revenue Mix</span></div>
+        <div class="d-card-head"><span class="d-card-t">Channel Mix</span></div>
         <div class="d-card-body"><div class="chart-wrap"><canvas id="c_donut"></canvas></div></div>
       </div>
     </div>
   </div>
 
-  <!-- ════════ TAB 1: BUDGET VS ACTUAL ════════ -->
+  <!-- ════ TAB 1: GROWTH DRIVERS ════ -->
   <div class="dash-panel" id="panel1">
     <div class="kpi-strip reveal">
-      <div class="kpi blue"><div class="kpi-l">Total Budget</div><div class="kpi-v mono">$35.5M</div></div>
-      <div class="kpi green"><div class="kpi-l">Total Actual</div><div class="kpi-v mono">$34.2M</div></div>
-      <div class="kpi red"><div class="kpi-l">Total Variance</div><div class="kpi-v mono">($1.3M)</div><div class="kpi-ch dn">-3.6%</div></div>
-      <div class="kpi amber"><div class="kpi-l">Favorable Months</div><div class="kpi-v mono">5 / 9</div></div>
+      <div class="kpi blue"><div class="kpi-l">Total Growth</div><div class="kpi-v mono">+$7.17M</div><div class="kpi-ch up">+31.0%</div></div>
+      <div class="kpi green"><div class="kpi-l">Price Effect</div><div class="kpi-v mono">+$3.78M</div><div class="kpi-ch up">53% mix</div></div>
+      <div class="kpi violet"><div class="kpi-l">Volume Effect</div><div class="kpi-v mono">+$461K</div><div class="kpi-ch up">6% mix</div></div>
+      <div class="kpi amber"><div class="kpi-l">Utilization</div><div class="kpi-v mono">+$3.10M</div><div class="kpi-ch up">43% mix</div></div>
+      <div class="kpi red"><div class="kpi-l">Mix Effect</div><div class="kpi-v mono">-$175K</div><div class="kpi-ch dn">-2% mix</div></div>
     </div>
+
     <div class="d-card reveal">
-      <div class="d-card-head"><span class="d-card-t">Monthly Variance — Actual vs Budget</span><span class="d-card-badge" style="background:var(--violet-soft);color:var(--violet)">FY 2025</span></div>
-      <div class="d-card-body"><div class="chart-wrap"><canvas id="c_var"></canvas></div></div>
+      <div class="d-card-head"><span class="d-card-t">Growth Drivers Waterfall — Price vs Volume vs Mix</span><span class="d-card-badge" style="background:var(--violet-soft);color:var(--violet)">PVM Analysis</span></div>
+      <div class="d-card-body"><div class="chart-wrap tall"><canvas id="c_waterfall"></canvas></div>
+        <div class="insight info">
+          <div class="insight-ic">💡</div>
+          <div class="insight-tx"><strong>Price-led growth.</strong> 53% of total growth came from pricing actions, indicating strong pricing power. However, mix effect turned negative (-$175K) due to declining premium product share — a leading indicator worth monitoring closely in Q4.</div>
+        </div>
+      </div>
     </div>
-    <div class="d-card reveal">
-      <div class="d-card-head"><span class="d-card-t">Department Budget Variance</span></div>
-      <div class="d-card-body">
-        <table class="dtable">
-          <thead><tr><th>Department</th><th>Budget</th><th>Actual</th><th>Variance</th><th>%</th><th>Status</th></tr></thead>
-          <tbody>
-            <tr><td class="bold">Inpatient</td><td class="mono">$16.7M</td><td class="mono">$16.5M</td><td class="mono">($200K)</td><td class="mono">-1.2%</td><td><span class="pill pill-a">Slight Under</span></td></tr>
-            <tr><td class="bold">Outpatient</td><td class="mono">$8.0M</td><td class="mono">$8.2M</td><td class="mono">$200K</td><td class="mono">+2.5%</td><td><span class="pill pill-g">Over Budget</span></td></tr>
-            <tr><td class="bold">Emergency</td><td class="mono">$4.3M</td><td class="mono">$4.4M</td><td class="mono">$52K</td><td class="mono">+1.2%</td><td><span class="pill pill-g">Over Budget</span></td></tr>
-            <tr><td class="bold">Lab & Diag</td><td class="mono">$3.1M</td><td class="mono">$2.9M</td><td class="mono">($202K)</td><td class="mono">-6.5%</td><td><span class="pill pill-r">Under Budget</span></td></tr>
-            <tr><td class="bold">Pharmacy</td><td class="mono">$2.1M</td><td class="mono">$2.2M</td><td class="mono">$101K</td><td class="mono">+4.8%</td><td><span class="pill pill-g">Over Budget</span></td></tr>
-          </tbody>
-        </table>
+
+    <div class="grid-2 reveal">
+      <div class="d-card">
+        <div class="d-card-head"><span class="d-card-t">Driver Decomposition by Segment</span></div>
+        <div class="d-card-body">
+          <table class="dtable">
+            <thead><tr><th>Driver</th><th class="right">Amount</th><th class="right">Contribution</th><th class="right">Growth %</th></tr></thead>
+            <tbody>
+              <tr><td class="bold">Price Effect</td><td class="right mono">$3,782,700</td><td class="right mono">53%</td><td class="right mono"><span style="color:var(--green)">+17%</span></td></tr>
+              <tr><td class="bold">Utilization Effect</td><td class="right mono">$3,105,464</td><td class="right mono">43%</td><td class="right mono"><span style="color:var(--green)">+14%</span></td></tr>
+              <tr><td class="bold">Volume Effect</td><td class="right mono">$461,479</td><td class="right mono">6%</td><td class="right mono"><span style="color:var(--green)">+2%</span></td></tr>
+              <tr><td class="bold">Mix / Pharmacy</td><td class="right mono">($175,219)</td><td class="right mono">-2%</td><td class="right mono"><span style="color:var(--red)">-1%</span></td></tr>
+              <tr class="total-row"><td>Total Growth</td><td class="right mono">$7,174,424</td><td class="right mono">100%</td><td class="right mono">+31%</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="d-card">
+        <div class="d-card-head"><span class="d-card-t">Driver Mix</span></div>
+        <div class="d-card-body"><div class="chart-wrap"><canvas id="c_drivermix"></canvas></div></div>
       </div>
     </div>
   </div>
 
-  <!-- ════════ TAB 2: REVENUE FORECAST ════════ -->
+  <!-- ════ TAB 2: INCOME STATEMENT ════ -->
   <div class="dash-panel" id="panel2">
     <div class="kpi-strip reveal">
-      <div class="kpi cyan"><div class="kpi-l">Projected Annual Rev</div><div class="kpi-v mono">$46.8M</div><div class="kpi-ch up">▲ 8.2%</div></div>
-      <div class="kpi blue"><div class="kpi-l">Q4 Forecast</div><div class="kpi-v mono">$12.6M</div></div>
-      <div class="kpi green"><div class="kpi-l">Best Case</div><div class="kpi-v mono">$49.1M</div></div>
-      <div class="kpi amber"><div class="kpi-l">Worst Case</div><div class="kpi-v mono">$44.2M</div></div>
+      <div class="kpi blue"><div class="kpi-l">Revenue</div><div class="kpi-v mono">$48.2M</div><div class="kpi-ch up">▲ 12.4%</div></div>
+      <div class="kpi green"><div class="kpi-l">Gross Profit</div><div class="kpi-v mono">$20.6M</div><div class="kpi-ch up">▲ 16.8%</div></div>
+      <div class="kpi violet"><div class="kpi-l">EBITDA</div><div class="kpi-v mono">$11.3M</div><div class="kpi-ch up">▲ 21.5%</div></div>
+      <div class="kpi amber"><div class="kpi-l">Operating Income</div><div class="kpi-v mono">$8.7M</div><div class="kpi-ch up">▲ 19.2%</div></div>
+      <div class="kpi pink"><div class="kpi-l">Net Income</div><div class="kpi-v mono">$6.2M</div><div class="kpi-ch up">▲ 18.4%</div></div>
     </div>
-    <div class="d-card reveal">
-      <div class="d-card-head"><span class="d-card-t">12-Month Revenue Forecast with Confidence Band</span><span class="d-card-badge" style="background:var(--amber-soft);color:var(--amber)">Forecast</span></div>
-      <div class="d-card-body"><div class="chart-wrap"><canvas id="c_forecast"></canvas></div></div>
+
+    <div class="grid-2 reveal">
+      <div class="d-card">
+        <div class="d-card-head"><span class="d-card-t">Income Statement — YTD vs PY</span><span class="d-card-badge" style="background:var(--blue-soft);color:var(--blue)">Common-Size</span></div>
+        <div class="d-card-body">
+          <table class="dtable">
+            <thead><tr><th>Line Item</th><th class="right">Current</th><th class="right">% Rev</th><th class="right">PY</th><th class="right">YoY</th></tr></thead>
+            <tbody>
+              <tr><td class="bold">Revenue</td><td class="right mono">$48,200</td><td class="right mono">100.0%</td><td class="right mono">$42,884</td><td class="right mono"><span style="color:var(--green)">+12.4%</span></td></tr>
+              <tr><td class="sub">COGS</td><td class="right mono">($27,580)</td><td class="right mono">57.2%</td><td class="right mono">($25,250)</td><td class="right mono">+9.2%</td></tr>
+              <tr class="total-row"><td>Gross Profit</td><td class="right mono">$20,620</td><td class="right mono">42.8%</td><td class="right mono">$17,634</td><td class="right mono"><span style="color:var(--green)">+16.9%</span></td></tr>
+              <tr><td class="sub">S&M</td><td class="right mono">($6,750)</td><td class="right mono">14.0%</td><td class="right mono">($6,260)</td><td class="right mono">+7.8%</td></tr>
+              <tr><td class="sub">R&D</td><td class="right mono">($3,180)</td><td class="right mono">6.6%</td><td class="right mono">($2,815)</td><td class="right mono">+13.0%</td></tr>
+              <tr><td class="sub">G&A</td><td class="right mono">($1,990)</td><td class="right mono">4.1%</td><td class="right mono">($1,860)</td><td class="right mono">+7.0%</td></tr>
+              <tr class="total-row"><td>Operating Income</td><td class="right mono">$8,700</td><td class="right mono">18.0%</td><td class="right mono">$6,699</td><td class="right mono"><span style="color:var(--green)">+29.9%</span></td></tr>
+              <tr><td class="sub">+ D&A</td><td class="right mono">$2,600</td><td class="right mono">5.4%</td><td class="right mono">$2,605</td><td class="right mono">-0.2%</td></tr>
+              <tr class="total-row"><td>EBITDA</td><td class="right mono">$11,300</td><td class="right mono">23.4%</td><td class="right mono">$9,304</td><td class="right mono"><span style="color:var(--green)">+21.5%</span></td></tr>
+              <tr><td class="sub">Interest & Tax</td><td class="right mono">($2,500)</td><td class="right mono">5.2%</td><td class="right mono">($2,066)</td><td class="right mono">+21.0%</td></tr>
+              <tr class="total-row"><td>Net Income</td><td class="right mono">$6,200</td><td class="right mono">12.9%</td><td class="right mono">$5,238</td><td class="right mono"><span style="color:var(--green)">+18.4%</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="d-card">
+        <div class="d-card-head"><span class="d-card-t">Margin Trend Analysis</span></div>
+        <div class="d-card-body"><div class="chart-wrap tall"><canvas id="c_margins"></canvas></div></div>
+      </div>
     </div>
+
     <div class="d-card reveal">
-      <div class="d-card-head"><span class="d-card-t">Key Forecast Assumptions</span></div>
+      <div class="d-card-body" style="padding-top:1rem">
+        <div class="insight pos">
+          <div class="insight-ic">✅</div>
+          <div class="insight-tx"><strong>Operating leverage in action.</strong> Revenue grew 12.4% but Operating Income grew 29.9% — a 2.4x leverage ratio. Gross margin expanded 180bps as cost growth (9.2%) lagged revenue growth, while disciplined S&M spending (+7.8%) reinforced margin expansion. R&D investment outpaced revenue at +13% — appropriate for sustaining future growth.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ════ TAB 3: 3-STATEMENT MODEL ════ -->
+  <div class="dash-panel" id="panel3">
+    <div class="kpi-strip reveal">
+      <div class="kpi blue"><div class="kpi-l">Total Assets</div><div class="kpi-v mono">$78.4M</div><div class="kpi-ch up">▲ 14.2%</div></div>
+      <div class="kpi green"><div class="kpi-l">Equity</div><div class="kpi-v mono">$42.6M</div><div class="kpi-ch up">▲ 17.1%</div></div>
+      <div class="kpi violet"><div class="kpi-l">Cash</div><div class="kpi-v mono">$14.2M</div><div class="kpi-ch up">▲ 8.4%</div></div>
+      <div class="kpi amber"><div class="kpi-l">D/E Ratio</div><div class="kpi-v mono">0.42x</div><div class="kpi-ch nt">→ Stable</div></div>
+      <div class="kpi cyan"><div class="kpi-l">Current Ratio</div><div class="kpi-v mono">2.18x</div><div class="kpi-ch up">▲ 0.12</div></div>
+    </div>
+
+    <div class="grid-2 reveal">
+      <div class="d-card">
+        <div class="d-card-head"><span class="d-card-t">Balance Sheet — Summary</span><span class="d-card-badge" style="background:var(--violet-soft);color:var(--violet)">As-of</span></div>
+        <div class="d-card-body">
+          <table class="dtable">
+            <tbody>
+              <tr><td class="bold" colspan="2" style="background:var(--surface2);text-transform:uppercase;font-size:.65rem;letter-spacing:1px;color:var(--blue)">ASSETS</td></tr>
+              <tr><td class="sub">Cash & Equivalents</td><td class="right mono">$14,200</td></tr>
+              <tr><td class="sub">Accounts Receivable</td><td class="right mono">$8,640</td></tr>
+              <tr><td class="sub">Inventory</td><td class="right mono">$5,820</td></tr>
+              <tr><td class="sub">Other Current</td><td class="right mono">$2,140</td></tr>
+              <tr class="total-row"><td>Current Assets</td><td class="right mono">$30,800</td></tr>
+              <tr><td class="sub">PP&E (net)</td><td class="right mono">$32,400</td></tr>
+              <tr><td class="sub">Intangibles</td><td class="right mono">$15,200</td></tr>
+              <tr class="total-row"><td>Total Assets</td><td class="right mono">$78,400</td></tr>
+              <tr><td class="bold" colspan="2" style="background:var(--surface2);text-transform:uppercase;font-size:.65rem;letter-spacing:1px;color:var(--red)">LIABILITIES & EQUITY</td></tr>
+              <tr><td class="sub">Accounts Payable</td><td class="right mono">$6,820</td></tr>
+              <tr><td class="sub">Short-term Debt</td><td class="right mono">$3,420</td></tr>
+              <tr><td class="sub">Other Current</td><td class="right mono">$3,880</td></tr>
+              <tr class="total-row"><td>Current Liabilities</td><td class="right mono">$14,120</td></tr>
+              <tr><td class="sub">Long-term Debt</td><td class="right mono">$15,200</td></tr>
+              <tr><td class="sub">Other LT</td><td class="right mono">$6,480</td></tr>
+              <tr class="total-row"><td>Equity</td><td class="right mono">$42,600</td></tr>
+              <tr class="total-row"><td>Total L+E</td><td class="right mono">$78,400</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="d-card">
+        <div class="d-card-head"><span class="d-card-t">Cash Flow Statement — YTD</span><span class="d-card-badge" style="background:var(--green-soft);color:var(--green)">Reconciled</span></div>
+        <div class="d-card-body">
+          <table class="dtable">
+            <tbody>
+              <tr><td class="bold" colspan="2" style="background:var(--surface2);text-transform:uppercase;font-size:.65rem;letter-spacing:1px;color:var(--green)">OPERATING</td></tr>
+              <tr><td>Net Income</td><td class="right mono">$6,200</td></tr>
+              <tr><td>+ D&A</td><td class="right mono">$2,600</td></tr>
+              <tr><td>+ Stock Comp</td><td class="right mono">$580</td></tr>
+              <tr><td>Δ Working Capital</td><td class="right mono">($1,420)</td></tr>
+              <tr class="total-row"><td>Cash from Operations</td><td class="right mono">$7,960</td></tr>
+              <tr><td class="bold" colspan="2" style="background:var(--surface2);text-transform:uppercase;font-size:.65rem;letter-spacing:1px;color:var(--amber)">INVESTING</td></tr>
+              <tr><td>CapEx</td><td class="right mono">($3,200)</td></tr>
+              <tr><td>Acquisitions</td><td class="right mono">($1,800)</td></tr>
+              <tr class="total-row"><td>Cash from Investing</td><td class="right mono">($5,000)</td></tr>
+              <tr><td class="bold" colspan="2" style="background:var(--surface2);text-transform:uppercase;font-size:.65rem;letter-spacing:1px;color:var(--violet)">FINANCING</td></tr>
+              <tr><td>Debt Repayment</td><td class="right mono">($1,200)</td></tr>
+              <tr><td>Dividends</td><td class="right mono">($650)</td></tr>
+              <tr class="total-row"><td>Cash from Financing</td><td class="right mono">($1,850)</td></tr>
+              <tr class="total-row"><td>Net Change in Cash</td><td class="right mono">$1,110</td></tr>
+              <tr><td>Free Cash Flow</td><td class="right mono">$4,760</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <div class="d-card reveal">
+      <div class="d-card-body" style="padding-top:1rem">
+        <div class="insight pos">
+          <div class="insight-ic">💰</div>
+          <div class="insight-tx"><strong>Healthy capital structure.</strong> D/E of 0.42x and Current Ratio of 2.18x indicate strong liquidity. FCF of $4.76M (60% of CFO) provides flexibility for both growth investments and shareholder returns. Working capital consumed $1.42M as growth accelerated — within expected range.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ════ TAB 4: WORKING CAPITAL ════ -->
+  <div class="dash-panel" id="panel4">
+    <div class="kpi-strip reveal">
+      <div class="kpi blue"><div class="kpi-l">DSO</div><div class="kpi-v mono">52 days</div><div class="kpi-ch dn">▲ 4 days</div></div>
+      <div class="kpi green"><div class="kpi-l">DPO</div><div class="kpi-v mono">68 days</div><div class="kpi-ch up">▲ 6 days</div></div>
+      <div class="kpi amber"><div class="kpi-l">DIO</div><div class="kpi-v mono">41 days</div><div class="kpi-ch up">▼ 3 days</div></div>
+      <div class="kpi violet"><div class="kpi-l">CCC</div><div class="kpi-v mono">25 days</div><div class="kpi-ch up">▼ 5 days</div></div>
+      <div class="kpi cyan"><div class="kpi-l">NWC</div><div class="kpi-v mono">$16.7M</div><div class="kpi-ch up">▲ 8.5%</div></div>
+    </div>
+
+    <div class="d-card reveal">
+      <div class="d-card-head"><span class="d-card-t">Cash Conversion Cycle Trend</span><span class="d-card-badge" style="background:var(--cyan);color:#fff">CCC Analysis</span></div>
+      <div class="d-card-body"><div class="chart-wrap tall"><canvas id="c_ccc"></canvas></div>
+        <div class="insight pos">
+          <div class="insight-ic">⚡</div>
+          <div class="insight-tx"><strong>CCC improved by 5 days YoY.</strong> The reduction is driven primarily by extending DPO from 62 to 68 days (better supplier negotiation) and lowering DIO from 44 to 41 days (improved inventory turns). DSO trending up — collections team should focus on aging buckets &gt;60 days.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid-2 reveal">
+      <div class="d-card">
+        <div class="d-card-head"><span class="d-card-t">Working Capital Components</span></div>
+        <div class="d-card-body">
+          <table class="dtable">
+            <thead><tr><th>Component</th><th class="right">Current</th><th class="right">PY</th><th class="right">Δ</th></tr></thead>
+            <tbody>
+              <tr><td class="bold">Accounts Receivable</td><td class="right mono">$8,640</td><td class="right mono">$7,860</td><td class="right mono"><span style="color:var(--red)">+$780</span></td></tr>
+              <tr><td class="bold">Inventory</td><td class="right mono">$5,820</td><td class="right mono">$5,640</td><td class="right mono"><span style="color:var(--red)">+$180</span></td></tr>
+              <tr><td class="bold">Prepaid Expenses</td><td class="right mono">$1,420</td><td class="right mono">$1,280</td><td class="right mono"><span style="color:var(--red)">+$140</span></td></tr>
+              <tr><td class="bold">Accounts Payable</td><td class="right mono">($6,820)</td><td class="right mono">($5,940)</td><td class="right mono"><span style="color:var(--green)">+$880</span></td></tr>
+              <tr><td class="bold">Accrued Expenses</td><td class="right mono">($2,420)</td><td class="right mono">($2,180)</td><td class="right mono"><span style="color:var(--green)">+$240</span></td></tr>
+              <tr class="total-row"><td>Net Working Capital</td><td class="right mono">$6,640</td><td class="right mono">$6,660</td><td class="right mono">($20)</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="d-card">
+        <div class="d-card-head"><span class="d-card-t">AR Aging Analysis</span></div>
+        <div class="d-card-body"><div class="chart-wrap"><canvas id="c_aging"></canvas></div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ════ TAB 5: PROFITABILITY ════ -->
+  <div class="dash-panel" id="panel5">
+    <div class="kpi-strip reveal">
+      <div class="kpi blue"><div class="kpi-l">Total Physicians</div><div class="kpi-v mono">48</div></div>
+      <div class="kpi green"><div class="kpi-l">Avg Rev / Physician</div><div class="kpi-v mono">$712K</div><div class="kpi-ch up">▲ 8.2%</div></div>
+      <div class="kpi violet"><div class="kpi-l">Top Specialty</div><div class="kpi-v" style="font-size:1.1rem">Cardiology</div></div>
+      <div class="kpi amber"><div class="kpi-l">Avg Margin</div><div class="kpi-v mono">34.2%</div><div class="kpi-ch up">▲ 1.8pp</div></div>
+      <div class="kpi pink"><div class="kpi-l">Total Patients</div><div class="kpi-v mono">11,640</div><div class="kpi-ch up">▲ 12.4%</div></div>
+    </div>
+
+    <div class="d-card reveal">
+      <div class="d-card-head"><span class="d-card-t">Revenue by Specialty</span><span class="d-card-badge" style="background:var(--violet-soft);color:var(--violet)">Annual</span></div>
+      <div class="d-card-body"><div class="chart-wrap tall"><canvas id="c_spec"></canvas></div></div>
+    </div>
+
+    <div class="d-card reveal">
+      <div class="d-card-head"><span class="d-card-t">Top 10 Physicians by Revenue & Margin</span><span class="d-card-badge" style="background:var(--pink-soft);color:var(--pink)">Profitability</span></div>
       <div class="d-card-body">
         <table class="dtable">
-          <thead><tr><th>Driver</th><th>Base Case</th><th>Optimistic</th><th>Conservative</th><th>Sensitivity</th></tr></thead>
+          <thead><tr><th>Physician</th><th>Specialty</th><th class="right">Revenue</th><th class="right">Direct Cost</th><th class="right">Contribution</th><th class="right">Margin</th><th class="right">Patients</th><th>Status</th></tr></thead>
           <tbody>
-            <tr><td class="bold">Patient Volume Growth</td><td class="mono">5.0%</td><td class="mono">8.0%</td><td class="mono">2.0%</td><td><span class="pill pill-r">High</span></td></tr>
-            <tr><td class="bold">Avg Revenue / Patient</td><td class="mono">$2,450</td><td class="mono">$2,600</td><td class="mono">$2,300</td><td><span class="pill pill-a">Medium</span></td></tr>
-            <tr><td class="bold">Payer Mix (Private %)</td><td class="mono">62%</td><td class="mono">68%</td><td class="mono">58%</td><td><span class="pill pill-r">High</span></td></tr>
-            <tr><td class="bold">Collection Rate</td><td class="mono">94.3%</td><td class="mono">96.0%</td><td class="mono">92.0%</td><td><span class="pill pill-a">Medium</span></td></tr>
-            <tr><td class="bold">New Services Launch</td><td class="mono">Q3</td><td class="mono">Q2</td><td class="mono">Q4</td><td><span class="pill pill-g">Low</span></td></tr>
+            <tr><td class="bold">Dr. A. Hassan</td><td>Cardiology</td><td class="right mono">$1,420K</td><td class="right mono">($820K)</td><td class="right mono">$600K</td><td class="right mono"><span class="pill pill-g">42.3%</span></td><td class="right mono">1,240</td><td><span class="pill pill-g">Star</span></td></tr>
+            <tr><td class="bold">Dr. S. Mahmoud</td><td>Orthopedics</td><td class="right mono">$1,180K</td><td class="right mono">($710K)</td><td class="right mono">$470K</td><td class="right mono"><span class="pill pill-g">39.8%</span></td><td class="right mono">980</td><td><span class="pill pill-g">Star</span></td></tr>
+            <tr><td class="bold">Dr. M. Ibrahim</td><td>Neurology</td><td class="right mono">$1,050K</td><td class="right mono">($680K)</td><td class="right mono">$370K</td><td class="right mono"><span class="pill pill-g">35.2%</span></td><td class="right mono">820</td><td><span class="pill pill-g">Healthy</span></td></tr>
+            <tr><td class="bold">Dr. F. Nabil</td><td>Oncology</td><td class="right mono">$980K</td><td class="right mono">($650K)</td><td class="right mono">$330K</td><td class="right mono"><span class="pill pill-g">33.7%</span></td><td class="right mono">560</td><td><span class="pill pill-g">Healthy</span></td></tr>
+            <tr><td class="bold">Dr. R. Youssef</td><td>Cardiology</td><td class="right mono">$920K</td><td class="right mono">($580K)</td><td class="right mono">$340K</td><td class="right mono"><span class="pill pill-g">37.0%</span></td><td class="right mono">890</td><td><span class="pill pill-g">Healthy</span></td></tr>
+            <tr><td class="bold">Dr. H. Salem</td><td>Internal Med</td><td class="right mono">$850K</td><td class="right mono">($620K)</td><td class="right mono">$230K</td><td class="right mono"><span class="pill pill-a">27.1%</span></td><td class="right mono">1,450</td><td><span class="pill pill-b">Cash Cow</span></td></tr>
+            <tr><td class="bold">Dr. K. Adel</td><td>Pediatrics</td><td class="right mono">$720K</td><td class="right mono">($530K)</td><td class="right mono">$190K</td><td class="right mono"><span class="pill pill-a">26.4%</span></td><td class="right mono">1,680</td><td><span class="pill pill-b">Cash Cow</span></td></tr>
+            <tr><td class="bold">Dr. N. Farag</td><td>Gen Surgery</td><td class="right mono">$680K</td><td class="right mono">($520K)</td><td class="right mono">$160K</td><td class="right mono"><span class="pill pill-a">23.5%</span></td><td class="right mono">420</td><td><span class="pill pill-a">Question</span></td></tr>
+            <tr><td class="bold">Dr. L. Mostafa</td><td>Dermatology</td><td class="right mono">$620K</td><td class="right mono">($380K)</td><td class="right mono">$240K</td><td class="right mono"><span class="pill pill-g">38.7%</span></td><td class="right mono">1,920</td><td><span class="pill pill-g">Healthy</span></td></tr>
+            <tr><td class="bold">Dr. W. Karim</td><td>Urology</td><td class="right mono">$580K</td><td class="right mono">($420K)</td><td class="right mono">$160K</td><td class="right mono"><span class="pill pill-a">27.6%</span></td><td class="right mono">640</td><td><span class="pill pill-a">Question</span></td></tr>
+            <tr class="total-row"><td>Top 10 Total</td><td></td><td class="right mono">$9,000K</td><td class="right mono">($5,910K)</td><td class="right mono">$3,090K</td><td class="right mono">34.3%</td><td class="right mono">10,600</td><td></td></tr>
+          </tbody>
+        </table>
+        <div class="insight info">
+          <div class="insight-ic">💡</div>
+          <div class="insight-tx"><strong>Cardiology drives top performance.</strong> Dr. A. Hassan leads with $1.42M revenue at a 42.3% margin — combining high volume and premium specialty pricing. General Surgery and Urology show margin pressure (&lt;28%) despite specialist status, suggesting either pricing review or cost optimization opportunity.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid-2 reveal">
+      <div class="d-card">
+        <div class="d-card-head"><span class="d-card-t">Specialty Performance Mix</span></div>
+        <div class="d-card-body">
+          <table class="dtable">
+            <thead><tr><th>Specialty</th><th class="right">Physicians</th><th class="right">Revenue</th><th class="right">Avg Margin</th></tr></thead>
+            <tbody>
+              <tr><td class="bold">Cardiology</td><td class="right mono">8</td><td class="right mono">$5,840K</td><td class="right mono"><span style="color:var(--green)">39.8%</span></td></tr>
+              <tr><td class="bold">Orthopedics</td><td class="right mono">6</td><td class="right mono">$3,920K</td><td class="right mono"><span style="color:var(--green)">37.5%</span></td></tr>
+              <tr><td class="bold">Neurology</td><td class="right mono">4</td><td class="right mono">$2,840K</td><td class="right mono"><span style="color:var(--green)">35.2%</span></td></tr>
+              <tr><td class="bold">Oncology</td><td class="right mono">5</td><td class="right mono">$3,420K</td><td class="right mono"><span style="color:var(--green)">33.1%</span></td></tr>
+              <tr><td class="bold">Internal Med</td><td class="right mono">10</td><td class="right mono">$4,680K</td><td class="right mono">27.4%</td></tr>
+              <tr><td class="bold">Others</td><td class="right mono">15</td><td class="right mono">$5,500K</td><td class="right mono">28.2%</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="d-card">
+        <div class="d-card-head"><span class="d-card-t">Revenue per Patient — Top 5</span></div>
+        <div class="d-card-body"><div class="chart-wrap"><canvas id="c_revpt"></canvas></div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ════ TAB 6: BUDGET VS ACTUAL ════ -->
+  <div class="dash-panel" id="panel6">
+    <div class="kpi-strip reveal">
+      <div class="kpi blue"><div class="kpi-l">Total Budget</div><div class="kpi-v mono">$46.5M</div></div>
+      <div class="kpi green"><div class="kpi-l">Total Actual</div><div class="kpi-v mono">$48.2M</div></div>
+      <div class="kpi green"><div class="kpi-l">Variance</div><div class="kpi-v mono">+$1.7M</div><div class="kpi-ch up">+3.7%</div></div>
+      <div class="kpi amber"><div class="kpi-l">Favorable Months</div><div class="kpi-v mono">7 / 9</div></div>
+    </div>
+    <div class="d-card reveal">
+      <div class="d-card-head"><span class="d-card-t">Monthly Budget vs Actual</span></div>
+      <div class="d-card-body"><div class="chart-wrap tall"><canvas id="c_bva"></canvas></div>
+        <div class="insight pos">
+          <div class="insight-ic">🎯</div>
+          <div class="insight-tx"><strong>Strong budget overperformance.</strong> 7 of 9 months tracked above budget with September showing the largest favorable variance (+$263K, +6.6%). Underperformance in February tied to seasonal weakness and one-time customer churn event.</div>
+        </div>
+      </div>
+    </div>
+    <div class="d-card reveal">
+      <div class="d-card-head"><span class="d-card-t">Variance by Department</span></div>
+      <div class="d-card-body">
+        <table class="dtable">
+          <thead><tr><th>Department</th><th class="right">Budget</th><th class="right">Actual</th><th class="right">Variance $</th><th class="right">Var %</th><th>Driver</th></tr></thead>
+          <tbody>
+            <tr><td class="bold">Sales</td><td class="right mono">$22,000</td><td class="right mono">$23,400</td><td class="right mono"><span style="color:var(--green)">+$1,400</span></td><td class="right mono">+6.4%</td><td>New deals beat plan</td></tr>
+            <tr><td class="bold">Marketing</td><td class="right mono">$8,400</td><td class="right mono">$8,800</td><td class="right mono"><span style="color:var(--green)">+$400</span></td><td class="right mono">+4.8%</td><td>Campaign overperformance</td></tr>
+            <tr><td class="bold">Operations</td><td class="right mono">$10,200</td><td class="right mono">$10,000</td><td class="right mono"><span style="color:var(--red)">-$200</span></td><td class="right mono">-2.0%</td><td>Capacity constraint</td></tr>
+            <tr><td class="bold">Services</td><td class="right mono">$5,900</td><td class="right mono">$6,000</td><td class="right mono"><span style="color:var(--green)">+$100</span></td><td class="right mono">+1.7%</td><td>In line</td></tr>
+            <tr class="total-row"><td>Total</td><td class="right mono">$46,500</td><td class="right mono">$48,200</td><td class="right mono">+$1,700</td><td class="right mono">+3.7%</td><td></td></tr>
           </tbody>
         </table>
       </div>
     </div>
   </div>
 
-  <!-- ════════ TAB 3: PHYSICIAN PROFITABILITY ════════ -->
-  <div class="dash-panel" id="panel3">
+  <!-- ════ TAB 7: FORECAST ════ -->
+  <div class="dash-panel" id="panel7">
     <div class="kpi-strip reveal">
-      <div class="kpi blue"><div class="kpi-l">Total Physicians</div><div class="kpi-v mono">48</div></div>
-      <div class="kpi green"><div class="kpi-l">Avg Rev / Physician</div><div class="kpi-v mono">$712K</div></div>
-      <div class="kpi violet"><div class="kpi-l">Top Specialty</div><div class="kpi-v" style="font-size:1.1rem">Cardiology</div></div>
-      <div class="kpi amber"><div class="kpi-l">Profit Margin</div><div class="kpi-v mono">34.2%</div><div class="kpi-ch up">▲ 1.8pp</div></div>
+      <div class="kpi cyan"><div class="kpi-l">FY Forecast</div><div class="kpi-v mono">$66.2M</div><div class="kpi-ch up">▲ 14.5%</div></div>
+      <div class="kpi blue"><div class="kpi-l">Q4 Forecast</div><div class="kpi-v mono">$18.0M</div></div>
+      <div class="kpi green"><div class="kpi-l">Best Case</div><div class="kpi-v mono">$69.8M</div></div>
+      <div class="kpi amber"><div class="kpi-l">Worst Case</div><div class="kpi-v mono">$62.4M</div></div>
     </div>
     <div class="d-card reveal">
-      <div class="d-card-head"><span class="d-card-t">Revenue by Specialty</span><span class="d-card-badge" style="background:var(--violet-soft);color:var(--violet)">Annual</span></div>
-      <div class="d-card-body"><div class="chart-wrap"><canvas id="c_spec"></canvas></div></div>
+      <div class="d-card-head"><span class="d-card-t">12-Month Forecast with Confidence Interval</span><span class="d-card-badge" style="background:var(--amber-soft);color:var(--amber)">3-Scenario</span></div>
+      <div class="d-card-body"><div class="chart-wrap tall"><canvas id="c_forecast"></canvas></div>
+        <div class="insight info">
+          <div class="insight-ic">🔮</div>
+          <div class="insight-tx"><strong>FY trajectory remains strong.</strong> Base case projects $66.2M (+14.5% YoY), with $7.4M spread between best/worst cases reflecting volume sensitivity. Q4 historically delivers 27-30% of annual revenue — current pipeline supports the $18M target with 85% coverage.</div>
+        </div>
+      </div>
     </div>
     <div class="d-card reveal">
-      <div class="d-card-head"><span class="d-card-t">Top 8 Physicians by Revenue</span></div>
+      <div class="d-card-head"><span class="d-card-t">Key Forecast Drivers & Sensitivities</span></div>
       <div class="d-card-body">
         <table class="dtable">
-          <thead><tr><th>Physician</th><th>Specialty</th><th>Revenue</th><th>Cost</th><th>Margin</th><th>Patients</th></tr></thead>
+          <thead><tr><th>Driver</th><th class="right">Base</th><th class="right">Optimistic</th><th class="right">Conservative</th><th>Sensitivity</th></tr></thead>
           <tbody>
-            <tr><td class="bold">Dr. A. Hassan</td><td>Cardiology</td><td class="mono">$1.42M</td><td class="mono">$820K</td><td><span class="pill pill-g">42.3%</span></td><td class="mono">1,240</td></tr>
-            <tr><td class="bold">Dr. S. Mahmoud</td><td>Orthopedics</td><td class="mono">$1.18M</td><td class="mono">$710K</td><td><span class="pill pill-g">39.8%</span></td><td class="mono">980</td></tr>
-            <tr><td class="bold">Dr. M. Ibrahim</td><td>Neurology</td><td class="mono">$1.05M</td><td class="mono">$680K</td><td><span class="pill pill-g">35.2%</span></td><td class="mono">820</td></tr>
-            <tr><td class="bold">Dr. F. Nabil</td><td>Oncology</td><td class="mono">$980K</td><td class="mono">$650K</td><td><span class="pill pill-g">33.7%</span></td><td class="mono">560</td></tr>
-            <tr><td class="bold">Dr. R. Youssef</td><td>Cardiology</td><td class="mono">$920K</td><td class="mono">$580K</td><td><span class="pill pill-g">37.0%</span></td><td class="mono">890</td></tr>
-            <tr><td class="bold">Dr. H. Salem</td><td>Internal Med</td><td class="mono">$850K</td><td class="mono">$620K</td><td><span class="pill pill-a">27.1%</span></td><td class="mono">1,450</td></tr>
-            <tr><td class="bold">Dr. K. Adel</td><td>Pediatrics</td><td class="mono">$720K</td><td class="mono">$530K</td><td><span class="pill pill-a">26.4%</span></td><td class="mono">1,680</td></tr>
-            <tr><td class="bold">Dr. N. Farag</td><td>General Surg</td><td class="mono">$680K</td><td class="mono">$520K</td><td><span class="pill pill-a">23.5%</span></td><td class="mono">420</td></tr>
+            <tr><td class="bold">Patient Volume Growth</td><td class="right mono">+8%</td><td class="right mono">+12%</td><td class="right mono">+4%</td><td><span class="pill pill-r">High</span></td></tr>
+            <tr><td class="bold">Avg Revenue / Patient</td><td class="right mono">$2,450</td><td class="right mono">$2,600</td><td class="right mono">$2,300</td><td><span class="pill pill-a">Medium</span></td></tr>
+            <tr><td class="bold">Payer Mix (Private %)</td><td class="right mono">62%</td><td class="right mono">68%</td><td class="right mono">58%</td><td><span class="pill pill-r">High</span></td></tr>
+            <tr><td class="bold">Collection Rate</td><td class="right mono">94.3%</td><td class="right mono">96.0%</td><td class="right mono">92.0%</td><td><span class="pill pill-a">Medium</span></td></tr>
+            <tr><td class="bold">New Services Launch</td><td class="right mono">Q3</td><td class="right mono">Q2</td><td class="right mono">Q4</td><td><span class="pill pill-g">Low</span></td></tr>
           </tbody>
         </table>
       </div>
@@ -353,14 +635,16 @@ footer{text-align:center;padding:1.5rem;font-size:.68rem;color:var(--ink3);borde
 <div class="max-w">
   <div class="stag">Expertise</div>
   <div class="stitle">What I Do</div>
-  <p class="sdesc">Core competencies refined through healthcare financial analysis.</p>
+  <p class="sdesc">Core competencies across financial planning, analysis, and business intelligence.</p>
   <div class="sk-grid">
     <div class="sk reveal"><h4>FP&A</h4><p>Budgeting, forecasting & variance analysis</p><div class="sk-bar"><div class="sk-fill" style="width:95%;background:var(--blue)"></div></div></div>
-    <div class="sk reveal"><h4>Revenue Optimization</h4><p>Leakage detection & pricing analysis</p><div class="sk-bar"><div class="sk-fill" style="width:92%;background:var(--green)"></div></div></div>
-    <div class="sk reveal"><h4>Financial Modeling</h4><p>DCF, scenarios & sensitivity analysis</p><div class="sk-bar"><div class="sk-fill" style="width:90%;background:var(--violet)"></div></div></div>
-    <div class="sk reveal"><h4>Advanced Excel</h4><p>Power Query, PivotTables & VBA</p><div class="sk-bar"><div class="sk-fill" style="width:95%;background:var(--amber)"></div></div></div>
-    <div class="sk reveal"><h4>Power BI</h4><p>DAX, data modeling & reporting</p><div class="sk-bar"><div class="sk-fill" style="width:80%;background:var(--cyan)"></div></div></div>
-    <div class="sk reveal"><h4>Healthcare Analytics</h4><p>Revenue cycle, payer mix & physician analysis</p><div class="sk-bar"><div class="sk-fill" style="width:93%;background:var(--red)"></div></div></div>
+    <div class="sk reveal"><h4>3-Statement Modeling</h4><p>P&L, BS, and CF integration</p><div class="sk-bar"><div class="sk-fill" style="width:90%;background:var(--violet)"></div></div></div>
+    <div class="sk reveal"><h4>Growth Drivers Analysis</h4><p>Price/Volume/Mix decomposition</p><div class="sk-bar"><div class="sk-fill" style="width:92%;background:var(--green)"></div></div></div>
+    <div class="sk reveal"><h4>Working Capital</h4><p>CCC, DSO/DPO/DIO optimization</p><div class="sk-bar"><div class="sk-fill" style="width:88%;background:var(--cyan)"></div></div></div>
+    <div class="sk reveal"><h4>Profitability Analysis</h4><p>Contribution margin & physician profit</p><div class="sk-bar"><div class="sk-fill" style="width:93%;background:var(--pink)"></div></div></div>
+    <div class="sk reveal"><h4>Variance Analysis</h4><p>Budget vs actual & root-cause analysis</p><div class="sk-bar"><div class="sk-fill" style="width:92%;background:var(--amber)"></div></div></div>
+    <div class="sk reveal"><h4>Advanced Excel</h4><p>Power Query, dynamic models, VBA</p><div class="sk-bar"><div class="sk-fill" style="width:95%;background:var(--blue)"></div></div></div>
+    <div class="sk reveal"><h4>Power BI</h4><p>DAX, data modeling & reporting</p><div class="sk-bar"><div class="sk-fill" style="width:82%;background:var(--cyan)"></div></div></div>
   </div>
 </div>
 </section>
@@ -372,9 +656,9 @@ footer{text-align:center;padding:1.5rem;font-size:.68rem;color:var(--ink3);borde
   <div class="stitle">Experience</div>
   <p class="sdesc"></p>
   <div class="tl">
-    <div class="tl-i reveal"><div class="tl-dot"></div><div class="tl-d mono">Feb 2026 — Present</div><div class="tl-r">Senior Revenue Analyst</div><div class="tl-co">Andalusia Hospitals</div><div class="tl-tx">Leading revenue analysis across departments, specialties, and physicians. Building automated dashboards and financial models for executive decisions. Promoted based on strong performance.</div><div class="tl-tags"><span class="tl-tag">Revenue Analysis</span><span class="tl-tag">FP&A</span><span class="tl-tag">Power BI</span><span class="tl-tag">Financial Modeling</span></div></div>
+    <div class="tl-i reveal"><div class="tl-dot"></div><div class="tl-d mono">Feb 2026 — Present</div><div class="tl-r">Senior Revenue Analyst</div><div class="tl-co">Andalusia Hospitals</div><div class="tl-tx">Leading revenue and profitability analysis across departments, specialties, and physicians. Building automated dashboards, financial models, and growth driver analyses for executive decision-making.</div><div class="tl-tags"><span class="tl-tag">Revenue Analysis</span><span class="tl-tag">FP&A</span><span class="tl-tag">Growth Drivers</span><span class="tl-tag">Power BI</span></div></div>
     <div class="tl-i reveal"><div class="tl-dot"></div><div class="tl-d mono">Dec 2024 — Feb 2026</div><div class="tl-r">Financial Analyst</div><div class="tl-co">Andalusia Hospitals</div><div class="tl-tx">Variance analysis, budgeting and forecasting support, CRM & digital channel revenue tracking, revenue leakage identification.</div><div class="tl-tags"><span class="tl-tag">Variance Analysis</span><span class="tl-tag">Budgeting</span><span class="tl-tag">Excel</span></div></div>
-    <div class="tl-i reveal"><div class="tl-dot"></div><div class="tl-d mono">Nov 2023 — Nov 2024</div><div class="tl-r">Accountant</div><div class="tl-co">Panorama CDDS</div><div class="tl-tx">Managed financial transactions across 9 branches, AP/vendor reconciliations, payroll, and month-end closing.</div><div class="tl-tags"><span class="tl-tag">Accounting</span><span class="tl-tag">ERP</span><span class="tl-tag">Reconciliation</span></div></div>
+    <div class="tl-i reveal"><div class="tl-dot"></div><div class="tl-d mono">Nov 2023 — Nov 2024</div><div class="tl-r">Accountant</div><div class="tl-co">Panorama CDDS</div><div class="tl-tx">Managed financial transactions across 9 branches, AP/vendor reconciliations, payroll, and month-end closing.</div><div class="tl-tags"><span class="tl-tag">Accounting</span><span class="tl-tag">ERP</span></div></div>
     <div class="tl-i reveal"><div class="tl-dot"></div><div class="tl-d mono">2024</div><div class="tl-r">🏆 1st Place — IMA Case Competition</div><div class="tl-co">IMA Leadership Summit</div><div class="tl-tx">Won first place demonstrating excellence in financial analysis and strategic thinking.</div></div>
   </div>
 </div>
@@ -400,7 +684,7 @@ footer{text-align:center;padding:1.5rem;font-size:.68rem;color:var(--ink3);borde
   <div class="cta-box">
     <div class="stag">Contact</div>
     <div class="stitle">Let's Work Together</div>
-    <p style="color:var(--ink2);font-size:.88rem;margin-top:.4rem">Available for Financial & Revenue Analysis, FP&A, Financial Modeling, and Dashboard Development.</p>
+    <p style="color:var(--ink2);font-size:.88rem;margin-top:.4rem">Open to discussing Financial Analysis, FP&A, Modeling, and Dashboard projects.</p>
     <div class="c-links">
       <a class="c-l" href="mailto:mohand.abdelaaty@outlook.com"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>Email</a>
       <a class="c-l" href="http://www.linkedin.com/in/mohand-abdelatty" target="_blank"><svg fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>LinkedIn</a>
@@ -411,95 +695,99 @@ footer{text-align:center;padding:1.5rem;font-size:.68rem;color:var(--ink3);borde
 </div>
 </section>
 
-<footer>© 2026 Mohand Abdelaaty — Financial & Revenue Analyst</footer>
+<footer>© 2025 Mohand Abdelaaty — Financial & Revenue Analyst</footer>
 
 <script>
-// ── Tab switching ──
+const inited={};
 function showTab(n){
   document.querySelectorAll('.tab').forEach((t,i)=>t.classList.toggle('active',i===n));
   document.querySelectorAll('.dash-panel').forEach((p,i)=>{p.classList.toggle('active',i===n)});
-  // re-trigger reveal
-  document.querySelectorAll('.dash-panel.active .reveal:not(.on)').forEach(el=>{obs.observe(el)});
-  // init charts for the tab if needed
-  if(n===1&&!window._c1)initTab1();
-  if(n===2&&!window._c2)initTab2();
-  if(n===3&&!window._c3)initTab3();
+  document.querySelectorAll('.dash-panel.active .reveal:not(.on)').forEach(el=>obs.observe(el));
+  if(!inited[n]){initTab(n);inited[n]=true}
 }
-
-// ── Scroll reveal ──
 const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');obs.unobserve(e.target)}})},{threshold:.1});
 document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
 
-// ── Chart config ──
 Chart.defaults.color='#94a3b8';Chart.defaults.borderColor='rgba(0,0,0,.04)';Chart.defaults.font.family='DM Sans';
+
 const months=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep'];
-const rev=[3755,3663,3880,3836,3960,4088,4183,4027,4263];
-const tgt=[3700,3600,3800,3750,3850,3900,3950,3900,4000];
 
-// Tab 0 — Revenue chart
-new Chart(document.getElementById('c_rev'),{
-  type:'line',
-  data:{labels:months,datasets:[
-    {label:'Actual',data:rev,borderColor:'#2563eb',backgroundColor:'rgba(37,99,235,.07)',fill:true,tension:.4,pointRadius:5,pointHoverRadius:8,borderWidth:2.5},
-    {label:'Target',data:tgt,borderColor:'#dc2626',borderDash:[6,4],tension:.4,pointRadius:3,borderWidth:2,backgroundColor:'transparent'}
-  ]},
-  options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'top',labels:{usePointStyle:true,padding:16,font:{size:11}}},tooltip:{callbacks:{label:c=>`${c.dataset.label}: $${(c.parsed.y/1e3).toFixed(1)}M`}}},scales:{y:{ticks:{callback:v=>'$'+(v/1e3).toFixed(1)+'M',font:{size:10}},grid:{color:'rgba(0,0,0,.03)'}},x:{grid:{display:false},ticks:{font:{size:10}}}}}
-});
-
-// Donut
-new Chart(document.getElementById('c_donut'),{
-  type:'doughnut',
-  data:{labels:['Inpatient','Outpatient','Emergency','Lab','Pharmacy'],datasets:[{data:[48.2,24.1,12.8,8.4,6.5],backgroundColor:['#2563eb','#0891b2','#059669','#d97706','#7c3aed'],borderWidth:0,hoverOffset:6}]},
-  options:{responsive:true,maintainAspectRatio:false,cutout:'70%',plugins:{legend:{position:'bottom',labels:{usePointStyle:true,padding:10,font:{size:10}}},tooltip:{callbacks:{label:c=>c.label+': '+c.parsed+'%'}}}}
-});
-
-// Tab 1 — Variance chart
-function initTab1(){
-  window._c1=true;
-  const v=rev.map((r,i)=>r-tgt[i]);
-  new Chart(document.getElementById('c_var'),{
-    type:'bar',
-    data:{labels:months,datasets:[
-      {label:'Actual',data:rev,backgroundColor:'rgba(37,99,235,.7)',borderRadius:4,order:2},
-      {label:'Budget',data:tgt,backgroundColor:'rgba(220,38,38,.15)',borderColor:'#dc2626',borderWidth:1.5,borderDash:[4,3],type:'line',tension:.3,pointRadius:3,fill:false,order:1}
-    ]},
-    options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'top',labels:{usePointStyle:true,padding:16,font:{size:11}}},tooltip:{callbacks:{label:c=>`${c.dataset.label}: $${(c.parsed.y/1e3).toFixed(1)}M`}}},scales:{y:{ticks:{callback:v=>'$'+(v/1e3).toFixed(1)+'M',font:{size:10}},grid:{color:'rgba(0,0,0,.03)'}},x:{grid:{display:false},ticks:{font:{size:10}}}}}
-  });
-}
-
-// Tab 2 — Forecast
-function initTab2(){
-  window._c2=true;
-  const all=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
-  const hist=[3755,3663,3880,3836,3960,4088,4183,4027,4263,null,null,null];
-  const fc=[null,null,null,null,null,null,null,null,4263,4380,4420,4510];
-  const hi=[null,null,null,null,null,null,null,null,4263,4560,4660,4800];
-  const lo=[null,null,null,null,null,null,null,null,4263,4200,4180,4220];
-  new Chart(document.getElementById('c_forecast'),{
-    type:'line',
-    data:{labels:all,datasets:[
-      {label:'Actual',data:hist,borderColor:'#2563eb',backgroundColor:'rgba(37,99,235,.06)',fill:true,tension:.4,borderWidth:2.5,pointRadius:4},
+function initTab(n){
+  if(n===0){
+    const rev=[5050,4880,5200,5180,5320,5450,5600,5430,5680];
+    const tgt=[4900,4750,5050,5050,5180,5300,5450,5300,5500];
+    const py=[4520,4380,4620,4640,4750,4880,4980,4830,5050];
+    new Chart(document.getElementById('c_rev'),{type:'line',data:{labels:months,datasets:[
+      {label:'Actual',data:rev,borderColor:'#2563eb',backgroundColor:'rgba(37,99,235,.08)',fill:true,tension:.4,pointRadius:5,pointHoverRadius:8,borderWidth:2.5},
+      {label:'Target',data:tgt,borderColor:'#dc2626',borderDash:[6,4],tension:.4,pointRadius:3,borderWidth:2,backgroundColor:'transparent'},
+      {label:'Prior Year',data:py,borderColor:'#94a3b8',tension:.4,pointRadius:3,borderWidth:1.5,backgroundColor:'transparent'}
+    ]},options:chartOpts('$',true)});
+    new Chart(document.getElementById('c_donut'),{type:'doughnut',data:{labels:['Direct Sales','Partner','Online','Inbound'],datasets:[{data:[42,28,18,12],backgroundColor:['#2563eb','#0891b2','#7c3aed','#d97706'],borderWidth:0,hoverOffset:6}]},options:{responsive:true,maintainAspectRatio:false,cutout:'68%',plugins:{legend:{position:'bottom',labels:{usePointStyle:true,padding:8,font:{size:10}}},tooltip:{callbacks:{label:c=>c.label+': '+c.parsed+'%'}}}}});
+  }
+  if(n===1){
+    new Chart(document.getElementById('c_waterfall'),{type:'bar',data:{labels:['Prior Year','Price','Utilization','Volume','Mix','Current Year'],datasets:[{label:'Revenue',data:[23149,3783,3105,461,-175,30323],backgroundColor:['#94a3b8','#059669','#2563eb','#7c3aed','#dc2626','#0f172a'],borderRadius:6}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>(c.parsed.y>=0?'+':'')+'$'+c.parsed.y.toLocaleString()+'K'}}},scales:{y:{ticks:{callback:v=>'$'+(v/1e3).toFixed(0)+'K',font:{size:10}},grid:{color:'rgba(0,0,0,.03)'}},x:{grid:{display:false},ticks:{font:{size:10}}}}}});
+    new Chart(document.getElementById('c_drivermix'),{type:'doughnut',data:{labels:['Price','Utilization','Volume','Mix'],datasets:[{data:[53,43,6,-2],backgroundColor:['#059669','#2563eb','#7c3aed','#dc2626'],borderWidth:0,hoverOffset:6}]},options:{responsive:true,maintainAspectRatio:false,cutout:'68%',plugins:{legend:{position:'bottom',labels:{usePointStyle:true,padding:8,font:{size:10}}}}}});
+  }
+  if(n===2){
+    new Chart(document.getElementById('c_margins'),{type:'line',data:{labels:months,datasets:[
+      {label:'Gross Margin',data:[41.2,41.5,42.0,42.3,42.6,42.8,43.0,42.9,42.8],borderColor:'#059669',backgroundColor:'rgba(5,150,105,.08)',fill:true,tension:.4,borderWidth:2.5},
+      {label:'EBITDA Margin',data:[21.5,21.8,22.4,22.6,22.9,23.2,23.4,23.5,23.4],borderColor:'#2563eb',tension:.4,borderWidth:2,backgroundColor:'transparent'},
+      {label:'Net Margin',data:[12.0,12.2,12.5,12.6,12.7,12.8,12.9,13.0,12.9],borderColor:'#7c3aed',tension:.4,borderWidth:2,backgroundColor:'transparent'}
+    ]},options:chartOpts('%')});
+  }
+  if(n===4){
+    const dso=[56,55,54,53,53,52,52,52,52];const dpo=[62,63,64,65,66,67,67,68,68];const dio=[44,43,43,42,42,41,41,41,41];const ccc=dso.map((d,i)=>d-dpo[i]+dio[i]);
+    new Chart(document.getElementById('c_ccc'),{type:'line',data:{labels:months,datasets:[
+      {label:'DSO',data:dso,borderColor:'#dc2626',tension:.3,borderWidth:2,backgroundColor:'transparent'},
+      {label:'DPO',data:dpo,borderColor:'#059669',tension:.3,borderWidth:2,backgroundColor:'transparent'},
+      {label:'DIO',data:dio,borderColor:'#d97706',tension:.3,borderWidth:2,backgroundColor:'transparent'},
+      {label:'CCC',data:ccc,borderColor:'#7c3aed',backgroundColor:'rgba(124,58,237,.1)',fill:true,tension:.3,borderWidth:3}
+    ]},options:chartOpts(' days')});
+    new Chart(document.getElementById('c_aging'),{type:'bar',data:{labels:['Current','1-30','31-60','61-90','>90'],datasets:[{label:'AR Aging',data:[5240,2180,840,280,100],backgroundColor:['#059669','#2563eb','#d97706','#dc2626','#7c3aed'],borderRadius:6}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>'$'+c.parsed.y+'K'}}},scales:{y:{ticks:{callback:v=>'$'+v+'K',font:{size:10}},grid:{color:'rgba(0,0,0,.03)'}},x:{grid:{display:false},ticks:{font:{size:10}}}}}});
+  }
+  if(n===5){
+    new Chart(document.getElementById('c_spec'),{type:'bar',data:{labels:['Cardiology','Internal Med','Orthopedics','Others','Oncology','Neurology'],datasets:[
+      {label:'Revenue',data:[5840,4680,3920,5500,3420,2840],backgroundColor:'#2563eb',borderRadius:6},
+      {label:'Cost',data:[3520,3400,2450,3950,2290,1840],backgroundColor:'#cbd5e1',borderRadius:6}
+    ]},options:{responsive:true,maintainAspectRatio:false,indexAxis:'y',plugins:{legend:{position:'top',labels:{usePointStyle:true,padding:14,font:{size:11}}},tooltip:{callbacks:{label:c=>`${c.dataset.label}: $${c.parsed.x}K`}}},scales:{x:{ticks:{callback:v=>'$'+v+'K',font:{size:10}},grid:{color:'rgba(0,0,0,.03)'}},y:{grid:{display:false},ticks:{font:{size:10}}}}}});
+    new Chart(document.getElementById('c_revpt'),{type:'bar',data:{labels:['Dr. F. Nabil','Dr. M. Ibrahim','Dr. N. Farag','Dr. A. Hassan','Dr. R. Youssef'],datasets:[{label:'Revenue/Patient',data:[1750,1280,1620,1145,1034],backgroundColor:['#7c3aed','#2563eb','#0891b2','#059669','#d97706'],borderRadius:6}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>'$'+c.parsed.y.toLocaleString()}}},scales:{y:{ticks:{callback:v=>'$'+v,font:{size:10}},grid:{color:'rgba(0,0,0,.03)'}},x:{grid:{display:false},ticks:{font:{size:9}}}}}});
+  }
+  if(n===6){
+    const bud=[4900,4750,5050,5050,5180,5300,5450,5300,5500];
+    const act=[5050,4680,5200,5180,5320,5450,5600,5430,5680];
+    new Chart(document.getElementById('c_bva'),{type:'bar',data:{labels:months,datasets:[
+      {label:'Budget',data:bud,backgroundColor:'rgba(148,163,184,.5)',borderRadius:4},
+      {label:'Actual',data:act,backgroundColor:'#2563eb',borderRadius:4}
+    ]},options:chartOpts('$')});
+  }
+  if(n===7){
+    const all=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+    const hist=[5050,4880,5200,5180,5320,5450,5600,5430,5680,null,null,null];
+    const fc=[null,null,null,null,null,null,null,null,5680,5800,5950,6100];
+    const hi=[null,null,null,null,null,null,null,null,5680,6020,6300,6520];
+    const lo=[null,null,null,null,null,null,null,null,5680,5580,5650,5720];
+    new Chart(document.getElementById('c_forecast'),{type:'line',data:{labels:all,datasets:[
+      {label:'Actual',data:hist,borderColor:'#2563eb',backgroundColor:'rgba(37,99,235,.08)',fill:true,tension:.4,borderWidth:2.5,pointRadius:4},
       {label:'Forecast',data:fc,borderColor:'#d97706',borderDash:[5,3],tension:.4,borderWidth:2,pointRadius:4,pointStyle:'triangle',backgroundColor:'transparent'},
-      {label:'Upper',data:hi,borderColor:'transparent',backgroundColor:'rgba(217,119,6,.06)',fill:'+1',tension:.4,pointRadius:0},
-      {label:'Lower',data:lo,borderColor:'transparent',backgroundColor:'rgba(217,119,6,.06)',fill:'-1',tension:.4,pointRadius:0}
-    ]},
-    options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'top',labels:{usePointStyle:true,padding:16,font:{size:11},filter:i=>i.text!=='Upper'&&i.text!=='Lower'}},tooltip:{callbacks:{label:c=>`${c.dataset.label}: $${(c.parsed.y/1e3).toFixed(1)}M`}}},scales:{y:{ticks:{callback:v=>'$'+(v/1e3).toFixed(1)+'M',font:{size:10}},grid:{color:'rgba(0,0,0,.03)'}},x:{grid:{display:false},ticks:{font:{size:10}}}}}
-  });
+      {label:'Upper',data:hi,borderColor:'transparent',backgroundColor:'rgba(217,119,6,.08)',fill:'+1',tension:.4,pointRadius:0},
+      {label:'Lower',data:lo,borderColor:'transparent',backgroundColor:'rgba(217,119,6,.08)',fill:'-1',tension:.4,pointRadius:0}
+    ]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'top',labels:{usePointStyle:true,padding:14,font:{size:11},filter:i=>i.text!=='Upper'&&i.text!=='Lower'}},tooltip:{callbacks:{label:c=>`${c.dataset.label}: $${(c.parsed.y/1e3).toFixed(2)}M`}}},scales:{y:{ticks:{callback:v=>'$'+(v/1e3).toFixed(1)+'M',font:{size:10}},grid:{color:'rgba(0,0,0,.03)'}},x:{grid:{display:false},ticks:{font:{size:10}}}}}});
+  }
 }
 
-// Tab 3 — Specialty chart
-function initTab3(){
-  window._c3=true;
-  new Chart(document.getElementById('c_spec'),{
-    type:'bar',
-    data:{labels:['Cardiology','Orthopedics','Neurology','Oncology','Internal Med','Pediatrics','Gen Surgery','Dermatology'],
-      datasets:[
-        {label:'Revenue',data:[4.8,3.2,2.8,2.4,2.1,1.9,1.6,1.2],backgroundColor:'#2563eb',borderRadius:6},
-        {label:'Cost',data:[2.8,2.0,1.8,1.6,1.5,1.4,1.2,0.8],backgroundColor:'#e2e8f0',borderRadius:6}
-      ]},
-    options:{responsive:true,maintainAspectRatio:false,indexAxis:'y',plugins:{legend:{position:'top',labels:{usePointStyle:true,padding:16,font:{size:11}}},tooltip:{callbacks:{label:c=>`${c.dataset.label}: $${c.parsed.x}M`}}},scales:{x:{ticks:{callback:v=>'$'+v+'M',font:{size:10}},grid:{color:'rgba(0,0,0,.03)'}},y:{grid:{display:false},ticks:{font:{size:10}}}}}
-  });
+function chartOpts(unit,M){
+  return {responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'top',labels:{usePointStyle:true,padding:14,font:{size:11}}},tooltip:{callbacks:{label:c=>{
+    if(unit==='$')return `${c.dataset.label}: $${(c.parsed.y/1e3).toFixed(2)}M`;
+    if(unit==='%')return `${c.dataset.label}: ${c.parsed.y}%`;
+    return `${c.dataset.label}: ${c.parsed.y}${unit}`;
+  }}}},scales:{y:{ticks:{callback:v=>{
+    if(unit==='$')return '$'+(v/1e3).toFixed(1)+'M';
+    if(unit==='%')return v+'%';
+    return v+unit;
+  },font:{size:10}},grid:{color:'rgba(0,0,0,.03)'}},x:{grid:{display:false},ticks:{font:{size:10}}}}};
 }
+
+initTab(0);
 </script>
 </body>
 </html>
